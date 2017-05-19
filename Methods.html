@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+    //concat
+    console.log(concatarr("a","b","c","d","e","f"));
+    function concatarr(){
+      var concatStr= "";
+      for(i=0; i < arguments.length; i++) {
+        concatStr = concatStr  + arguments[i];
+      }
+      return concatStr;
+    }
+
+    //endswith
+console.log(endo("hey you this is the end", "this is the end"));
+function endo(longStr, shortStr) {// string 1 and string 2
+var shortlength=shortStr.length;
+var longStrTrunc= longStr.substring(longStr.length-shortlength);
+{
+  return shortStr === longStrTrunc;
+    // run this over and over till i < shortlength
+  //shortStr.charAt(1) === longStrTrunc.charAt(1);
+  //shortStr.charAt(2) === longStrTrunc.charAt(2);
+}
+
+}
+//includes
+function myIncludes(fullString, searchString) {
+  for (var i = 0; i < fullString.length; i++) {
+    var fullStringExtract = fullString.substr(i, searchString.length);
+    if (searchString === fullStringExtract) {
+      var results = true;
+      console.log(results);
+      i = fullString.length;
+    } else if (fullString.length - i < searchString.length) {
+      results = false;
+      console.log(results);
+      i = fullString.length;
+    }
+  }
+    return results;
+}
+myIndex("This is Jeb", "T")
+// index Of
+//return -1 if not found
+function myIndex(fullString, searchString) {
+  for (var i = 0; i < fullString.length; i++) {
+    var fullStringExtract = fullString.substr(i, searchString.length);
+    if (searchString === fullStringExtract) {
+      var results = i;
+      console.log(results);
+      i = fullString.length;
+    } else if (fullString.length - i < searchString.length) {
+      results = -1;
+      console.log(results);
+      i = fullString.length;
+    }
+  }
+    return results;
+}
+myIndex("This is Jeb", "h")
+//Push Array
+// push multiple values to an array  using a function
+// find length of array
+
+// concat array
+// use push method to concat array
+// original array
+var r = ['a','b','c'];
+
+function test(r){
+ var arr = ['d','e','f'];
+ r.push.apply(r, arr);
+
+ /*
+ More Code
+ */
+ return r;
+}
+var result = test( r );
+console.log( r ); // ["a", "b", "c", "d", "e", "f"]
+console.log( result === r ); // the returned array IS the original array but modified
+//join array
+
+
+    </script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
