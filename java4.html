@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      console.log(factors(18));
+      function factors(num){
+        var arr = [];
+        for (x = Math.floor(num / 2);
+             x > 0;
+             x--) {
+          if (num % x === 0) {
+            arr.push (x)
+          }
+        }
+        return arr;
+      }
+    </script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
