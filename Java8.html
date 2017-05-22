@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+    /*
+most repetitions of a character
+
+Write a function that takes a string and returns an object with the character which is repeated most and the number of times it is repeated. In the event of a tie, return all characters together in one string. For example, given the string "aabbbcdddceeff", return the object {chars: "bd", count: 3}.
+*/
+
+function repetitions(str) {
+    var counts = {};
+    for (var i in str) {
+        var ch = str[i];
+        if (ch in counts) {   // NOT FOR-IN!
+            counts[ch]++;   // counts[ch] = counts[ch] + 1;
+        } else {
+            counts[ch] = 1;
+        }
+    }
+    console.log(counts);
+    var max = 0;
+    var maxChars = [];
+    for (var ch in counts) {
+        if (counts[ch] > max) {
+            max = counts[ch];
+            maxChars = [ch];
+        } else if (counts[ch] === max) {
+            maxChars.push(ch);
+        }
+    }
+    return {
+        chars: maxChars.join(''),
+        count: max
+    };
+}
+
+console.log(repetitions('fwjfj'));
+
+    </script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>

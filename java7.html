@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+    //Write a function that takes two strings, the second with just one character.
+    //Return the number of times the character is found in the first string. For example, for inputs "Rubber baby buggy bumper" and "b", return 6.
+    // (You will need the string charAt method to retrieve the individual characters of the string.)
+    // The string
+var string = "Rubber baby buggy bumper";
+var char = "b"
+ function getChar(string, char)
+ {
+  var charCount = 0;
+  for(var i=0 ; i<string.length; i++)
+  {
+  if(string.charAt(i) == char)
+  {
+                   charCount++;
+      }
+}
+return charCount;
+}
+console.log(getChar(string, char));
+    </script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+  </body>
+</html>
