@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>hello there</title>
+    <style type="text/css">
+        p {
+            color: pink;
+            font-size: 10pt;
+        }
+
+        #foo:hover {
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>number-guessing games</h1>
+
+    <label>Guess a number between 1 and 10</label>
+    <input id="number_box" type="text" name="" value="">
+    <button id="number_button" type="button" name="button">Guess!</button>
+    <div id="msg_div" class="">
+
+    </div>
+
+    <script>
+    var numberBox = document.getElementById('number_box');
+    var numberButton = document.getElementById('number_button');
+    var msgDiv = document.getElementById('msg_div');
+
+    var number = Math.floor(Math.random() * 10) + 1;
+
+    numberBox.addEventListener('keypress', function (evt) {
+        if (evt.keyCode === 13) {
+            evt.preventDefault();
+            checkInput();
+        }
+    });
+
+    numberButton.addEventListener('click', function (evt) {
+        evt.preventDefault();
+        checkInput();
+    });
+
+    function checkInput() {
+        console.log(numberBox.value);
+        var guess = parseInt(numberBox.value);
+        if (guess !== NaN && (1 <= guess && guess <= 10)) {  // ! = =
+             if (number === guess) {
+                 msgDiv.innerHTML = 'You win! Number was: ' + number;
+                 // TODO
+             } else {
+                 msgDiv.innerHTML = 'Try again.';
+             }
+        } else {
+            msgDiv.innerHTML = 'Bad input!';
+        }
+    }
+
+    </script>
