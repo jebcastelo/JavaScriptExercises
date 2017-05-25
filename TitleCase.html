@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <script //Write a function that, given a string, returns a new string with the text in 'title case'. //For example, given the string "I like pizza.", return the string ` "I Like Pizza.".>
+    var string = "I like pizza.";
+
+    function returnTitleCase(string) {
+      //  var string = "I like pizza.";
+      var spliStr = string.toLowerCase().split(' ');
+      console.log("spliStr---->" + spliStr);
+      for (var i = 0; i < spliStr.length; i++) {
+        console.log("value of ---->" + i);
+        spliStr[i] = spliStr[i].charAt(0).toUpperCase() + spliStr[i].substring(1);
+        console.log("spliStr substring----->" + spliStr[i].substring(1));
+        console.log("spliStr----->" + spliStr[i]);
+      }
+      console.log("spliStr--->" + spliStr.join(' '));
+      return spliStr.join(' ');
+
+    }
+    document.write(returnTitleCase("I like pizza."))
+  </script>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>
